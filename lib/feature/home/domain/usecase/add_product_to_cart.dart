@@ -20,22 +20,4 @@ class GetAllCountryUsecase extends UseCase<Result<ResponseWrapper<List<CountryMo
   }
 }
 
-class AddToCartParams {
-  final String productId;
-  final int amount;
-  final List<String> variantValueIds;
 
-  AddToCartParams({
-    required this.productId,
-    required this.amount,
-    required this.variantValueIds,
-  });
-
-  Map<String, dynamic> toMap() {
-    return {
-      "productId": productId,
-      "amount": amount.toString(),
-      "variantValueIds":variantValueIds
-    };
-  }
-}
